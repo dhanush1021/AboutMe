@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+
+
+.outercontainer{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.showskills{
+    width: 20vh;
+    height: 20vh;
+    font-family: "JetBrains Mono", monospace;
+    background-color: black;
+    color: #7f7c7c;
+    border: 2px solid #7f7c7c;
+    cursor: pointer;
+    border-radius: 1vh;
+    font-weight: 100;
+    font-size: 2.5vh;
+    transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+.showskills:hover{
+    border: 2px solid white;
+    color: white;
+}
+.rotate-clockwise {
+  animation: rotate-clockwise 0.6s ease-in-out forwards;
+}
+
+.rotate-counterclockwise {
+  animation: rotate-counterclockwise 0.6s ease-in-out forwards;
+}
+
+@keyframes rotate-clockwise {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes rotate-counterclockwise {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+.upperskills{
+    width: 45vw;
+    height: 25vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.middleskills{
+    width: 60vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+}
+.lowerskills{
+    width: 45vw;
+    height: 25vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skill,.skill-middle,.skill-bottom-middle{
+    width: 10vw;
+    background-color: transparent;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1.4px solid #7f7c7c;
+    border-radius: 2vh;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 100;
+    font-size: 2.5vh;
+    color: #ffffff;
+    transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.skill-middle{
+    position: relative;
+    bottom: 14vh;
+}
+.skill-bottom-middle{
+    position: relative;
+    top: 14vh;
+}

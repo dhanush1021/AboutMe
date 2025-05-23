@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    height: 10vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 7px;
+    border-bottom: 1px solid #7f7c7c;
+}
+.Text{
+    width: 10%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.5vh;
+    font-style: normal;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    color: white;
+}

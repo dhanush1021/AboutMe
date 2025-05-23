@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.profile{
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.introduction{
+    height: 10%;
+    width: 30%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 3.5vh;
+    font-family: "JetBrains Mono", monospace;
+    border-bottom: 1px solid #7f7c7c;
+}
+.name{
+    font-weight: 700;
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 200%;
+}
+.description{
+    height: 7%;
+    width: 23%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 100;
+    font-size: 1.5vh;
+    text-transform: uppercase;
+    text-align: center;
+}
+.arrow{
+    position: relative;
+    top: 20%;
+    height: 10vh;
+    width: 10vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #7f7c7c;
+    cursor: pointer;
+    transition: border 0.7s;
+}
+.arrow:hover{
+    border: 2px solid #ffffff;
+    transition: 0.5s;
+}

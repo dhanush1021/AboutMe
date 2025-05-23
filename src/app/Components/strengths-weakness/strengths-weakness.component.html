@@ -1,0 +1,39 @@
+<div class="outercontainer">
+    <div class="upperskills">
+        <div class="skill" *ngIf ="IsOtherElementsVanishing">
+            angular
+        </div>
+        <div class="skill-middle" *ngIf ="IsOtherElementsVanishing">
+            dotnet
+        </div>
+        <div class="skill" *ngIf ="IsOtherElementsVanishing">
+            asp.net core
+        </div>
+    </div>
+    <div class="middleskills" [style.justify-content] = "!IsOtherElementsVanishing ? 'center' : 'space-between'">
+        <div class="skill" *ngIf ="IsOtherElementsVanishing">
+            typescript
+        </div>
+        
+        <button class="showskills"
+        [class.rotate-clockwise]="rotationDirection === 'clockwise'"
+        [class.rotate-counterclockwise]="rotationDirection === 'counterclockwise'"
+        (click)="toggleRotation()">
+            Show Skills
+        </button>
+        <div class="skill" *ngIf ="IsOtherElementsVanishing">
+            aws
+        </div>
+    </div>
+    <div class="lowerskills">
+        <div class="skill" *ngIf ="IsOtherElementsVanishing">
+            C#
+        </div>
+        <div class="skill-bottom-middle" *ngIf ="IsOtherElementsVanishing">
+            C++
+        </div>
+        <div class="skill" *ngIf ="IsOtherElementsVanishing">
+            Python
+        </div>
+    </div>
+</div>
