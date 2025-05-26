@@ -1,17 +1,21 @@
 <div class="outercontainer">
     <div class="upperskills">
-        <div class="skill" *ngIf ="IsOtherElementsVanishing">
+        <div class="skill" *ngIf ="IsOtherElementsVanishing" 
+        [class.fadein] = "IsOtherElementsVanishing">
             angular
         </div>
-        <div class="skill-middle" *ngIf ="IsOtherElementsVanishing">
+        <div class="skill-middle" *ngIf ="IsOtherElementsVanishing"
+        [class.fadein] = "IsOtherElementsVanishing">
             dotnet
         </div>
-        <div class="skill" *ngIf ="IsOtherElementsVanishing">
+        <div class="skill" *ngIf ="IsOtherElementsVanishing"
+        [class.fadein] = "IsOtherElementsVanishing">
             asp.net core
         </div>
     </div>
     <div class="middleskills" [style.justify-content] = "!IsOtherElementsVanishing ? 'center' : 'space-between'">
-        <div class="skill" *ngIf ="IsOtherElementsVanishing">
+        <div class="skill" *ngIf ="IsOtherElementsVanishing"
+        [class.fadein] = "IsOtherElementsVanishing">
             typescript
         </div>
         
@@ -21,18 +25,22 @@
         (click)="toggleRotation()">
             Show Skills
         </button>
-        <div class="skill" *ngIf ="IsOtherElementsVanishing">
+        <div class="skill" *ngIf ="IsOtherElementsVanishing"
+        [class.fadein] = "IsOtherElementsVanishing">
             aws
         </div>
     </div>
     <div class="lowerskills">
-        <div class="skill" *ngIf ="IsOtherElementsVanishing">
+        <div class="skill" *ngIf ="IsOtherElementsVanishing"
+        [class.fadein] = "IsOtherElementsVanishing">
             C#
         </div>
-        <div class="skill-bottom-middle" *ngIf ="IsOtherElementsVanishing">
+        <div class="skill-bottom-middle" *ngIf ="IsOtherElementsVanishing"
+        [class.fadein] = "IsOtherElementsVanishing">
             C++
         </div>
-        <div class="skill" *ngIf ="IsOtherElementsVanishing">
+        <div class="skill" *ngIf ="IsOtherElementsVanishing"
+        [class.fadein] = "IsOtherElementsVanishing">
             Python
         </div>
     </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BioService } from '../../../service/bio.service';
 
 @Component({
   selector: 'app-profile',
@@ -8,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class ProfileComponent {
 
+  scrollToBoll : boolean = false;
+  constructor(private _bioservice: BioService){
+
+  }
+
+  scrollTOview(){
+    this.scrollToBoll = !this.scrollToBoll;
+    this._bioservice.toCheckView.next(true);
+  }
 }

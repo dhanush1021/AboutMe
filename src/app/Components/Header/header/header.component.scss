@@ -4,7 +4,6 @@
     padding: 0;
     margin: 0;
 }
-
 .header{
     height: 10vh;
     width: 100vw;
@@ -27,5 +26,28 @@
     font-family: "JetBrains Mono", monospace;
     font-optical-sizing: auto;
     font-weight: 100;
+    color: white;
+    position: relative;
+    left: 8vh;
+    cursor: pointer;
+}
+.contactme{
+    width: 7vw;
+    height: 5vh;
+    position: relative;
+    right: 8vh;
+    background-color: black;
+    border-radius: 0.5vh;
+    border:  1px solid #7f7c7c;
+    color: #7f7c7c;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-size: 2vh;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.contactme:hover{
+    border: 1px solid white;
     color: white;
 }

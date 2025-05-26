@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Syne+Mono&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    background-color: black;
+}
+.outercontainer{
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+}
+.left{
+    height: 90vh;
+    width: 70vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.emailtemplate{
+    background: #212121;
+    box-shadow: 0.1vw 0.1vh 1.3vw rgb(87, 86, 86),
+    -0.1vw -0.1vh 1.3px rgb(60, 60, 60);
+    height: 66vh;
+    width: 46vw;
+    border-radius: 6vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-family: "Syne Mono", monospace;
+    font-size: 2.5vh;
+    color: #7f7c7c;
+}
+.emailbody{
+    overflow-wrap: break-word;
+    max-height: 55vh;
+    overflow-y: scroll;
+}
+.form{
+    height: 80vh;
+    width: 30vw;
+    background-color: transparent;
+    border-radius: 3vh;
+    border: 1px solid #7f7c7c;
+    display: flex;
+    justify-content: center;
+}
+.finalsubsections{
+    height: 80vh;
+    width: 30vw;
+    display: grid;
+    grid-template-rows: 11vh 11vh 40vh 6vh;
+    justify-content: center;
+    gap: 2vh;
+    position: relative;
+    top: 2vh;
+}
+.name{
+    width: 26vw;
+    height: 10vh;
+    display: grid;
+    grid-template-rows: 4vh 7vh;
+    color: white;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 100;
+    font-size: 2.5vh;
+}
+#name{
+    height: 6vh;
+    color:  white;
+    background-color: transparent;
+    border: 1px solid #7f7c7c;
+    border-radius: 1.2vh;
+    padding-left: 0.6vw;
+    padding-right: 0.6vw;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 100;
+    transition: border-color 0.3s ease-in-out;
+}
+#name:focus,#email:focus,#message:focus{
+    outline: none;
+    border: 1px solid white;
+}
+.email{
+    width: 26vw;
+    height: 10vh;
+    display: grid;
+    grid-template-rows: 4vh 7vh;
+    font-weight: 100;
+    font-size: 2.5vh;
+    color: white;
+    font-family: "JetBrains Mono", monospace;
+}
+#email{
+    height: 6vh;
+    color:  white;
+    background-color: transparent;
+    border: 1px solid #7f7c7c;
+    border-radius: 1.2vh;
+    padding-left: 0.6vw;
+    padding-right: 0.6vw;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 100;
+    transition: border-color 0.3s ease-in-out;
+}
+.message{
+    width: 26vw;
+    height: 40vh;
+    display: grid;
+    grid-template-rows: 4vh 35vh;
+    font-weight: 100;
+    font-size: 2.5vh;
+    color: white;
+    font-family: "JetBrains Mono", monospace;
+}
+#message{
+    background-color: transparent;
+    resize: none;
+    border-radius: 1vh;
+    padding-left: 0.6vw;
+    padding-right: 0.6vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    border:  1px solid #7f7c7c;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 100;
+    color: white;
+    transition: border-color 0.3s ease-in-out;
+}
+.submit{
+    width: 26vw;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+}
+.SubmitButton{
+    width: 12vw;
+    background-color: transparent;
+    border: 1px solid #7f7c7c;
+    color: #7f7c7c;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 100;
+    cursor: pointer;
+    font-size: 2.5vh;
+    border-radius: 2vh;
+    transition: all 0.3s ease-in-out;
+}
+.SubmitButton:hover{
+    border: 1px solid white;
+    color: white;
+}
+.right{
+    height: 90vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+::-webkit-scrollbar {
+  width: 0.8vh;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+// .Card1 {
+//     transform: perspective(500px) rotateY(-20deg) translatez(-11vw) translateX(18vw);
+//     transform-origin: 25% 50%;
+//     height: 10vh;
+//     transition: all 0.5s ease-in-out;
+// }
+// .Card1:hover{
+//     transform: perspective(500px) rotateY(0deg) translatez(0) translateX(18vw);
+// }
+// .Card2 {
+//     transform: perspective(500px) rotateY(20deg) translatez(-5vw) translateX(-7vw) translateY(-5vw);
+//     transform-origin: 75% 50%;
+//     height: 15vh;
+//     transition: all 0.5s ease-in-out;
+// }
+// .Card2:hover{
+//     transform: perspective(500px) rotateY(0) translatez(0) translateX(-7vw) translateY(-5vw);
+// }

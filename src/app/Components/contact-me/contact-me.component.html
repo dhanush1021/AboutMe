@@ -1,0 +1,58 @@
+<div class="container">
+    <app-header></app-header>
+    <div class="outercontainer">
+        <div class="left">
+            <div class="emailtemplate">
+                <div class="fromemail">
+                    <span>From : {{yourEmail}}</span>
+                </div>
+                <div class="toemail">
+                    <span>To : {{ToEmail}}</span>
+                </div>
+                <div class="subject">
+                    <span>Subject : Hey! {{yourName}} just contacted you via your website</span>
+                </div>
+                <div class="emailbody">
+                    <br/>
+                    <span>Hey Dhanush</span>
+                    <p><br/>{{yourMessage}}</p>
+                    <br/>
+                    <span>Regards,<br/>{{yourName}}</span>
+                </div>
+            </div>
+            <!-- <div class="Card1">
+                <app-image-card></app-image-card>
+            </div>
+            <div class="Card2">
+                <app-image-card></app-image-card>
+            </div>
+            <div class="Card1">
+                <app-image-card></app-image-card>
+            </div>
+            <div class="Card2">
+                <app-image-card></app-image-card>
+            </div> -->
+        </div>
+        <div class="right">
+            <div class="form">
+                <div class="finalsubsections">
+                    <div class="name">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name.." [(ngModel)]="yourName">
+                    </div>
+                    <div class="email">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your email.." [(ngModel)]="yourEmail">
+                    </div>
+                    <div class="message">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Write something.." [(ngModel)]="yourMessage"></textarea>
+                    </div>
+                    <div class="submit">
+                        <button type="submit" class="SubmitButton" (click)="OnSubmit()">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
