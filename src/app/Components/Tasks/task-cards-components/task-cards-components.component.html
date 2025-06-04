@@ -1,0 +1,60 @@
+<div class="CardContainer">
+    <div class="upperdiv">
+        <div class="upperupper">
+            <span class="tittle-text">
+                {{this.Task.Name}}
+            </span>
+        </div>
+        <div class="upperlower">
+            <div class="lowerupperleft">
+                <span class="tagstittle-text">
+                    Tags : 
+                </span>
+                <span class="tags-text">
+                    {{this.Task.Tags}}
+                </span>
+            </div>
+            <div class="lowerupperright">
+                <span class="tagstittle-text">
+                    Priority : 
+                </span>
+                <span class="tags-text">
+                    {{this.Taskpriority}}
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="middlediv">
+        <div class="leftmiddlediv">
+            <div class="startdate">
+                <span class="startdate-text">Start Date</span>
+                <span class="startdate-value">{{this.Task.StartDate}}</span>
+            </div>
+            <div class="duedate">
+                <span class="duedate-text">Due Date</span>
+                <span class="duedate-value">{{this.Task.DueDate}}</span>
+            </div>
+        </div>
+        <div class="centermiddlediv">
+            <div class="circle">
+                {{this.Task.Name.charAt(0).toUpperCase()}}
+            </div>
+        </div>
+        <div class="rightmiddlediv">
+            <div class="startdate">
+                <span class="startdate-text">Target Date</span>
+                <span class="startdate-value">{{this.Task.TargetDate}}</span>
+            </div>
+            <div class="duedate">
+                <span class="duedate-text">Status</span>
+                <span class="duedate-value">{{this.TaskStatus}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="lowerdiv">
+        <u>Description</u>
+        <div class="description">
+            {{this.Task.Description}}
+        </div>
+    </div>
+</div>

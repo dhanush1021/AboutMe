@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 *{
     padding: 0;
@@ -140,21 +141,29 @@
     display: flex;
     justify-content: center;
 }
-.SubmitButton{
+.SubmitButton,.submitbuttondisabled{
     width: 12vw;
     background-color: transparent;
     border: 1px solid #7f7c7c;
     color: #7f7c7c;
     font-family: "JetBrains Mono", monospace;
     font-weight: 100;
-    cursor: pointer;
     font-size: 2.5vh;
     border-radius: 2vh;
+}
+.SubmitButton{
+    cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 .SubmitButton:hover{
     border: 1px solid white;
     color: white;
+}
+.submitbuttondisabled{
+    cursor: not-allowed;
+    opacity: 0.5;
+    color: #7f7c7c;
+    border: 1px solid #7f7c7c;
 }
 .right{
     height: 90vh;
@@ -173,6 +182,22 @@
 
 ::-webkit-scrollbar-thumb {
     background-color: transparent;
+}
+.errors,.errors1{
+    font-size: 1.5vh;
+    color: red;
+    box-sizing: border-box;
+    padding-left: 0.5vw;
+    font-family: "Nunito", sans-serif;
+    font-weight: 200;
+}
+.errors1{
+    position: relative;
+    top: -0.3vh;
+}
+.errors{
+    position: relative;
+    top: 0.4vh;
 }
 // .Card1 {
 //     transform: perspective(500px) rotateY(-20deg) translatez(-11vw) translateX(18vw);

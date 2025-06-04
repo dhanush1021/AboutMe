@@ -1,16 +1,15 @@
 import { Component } from '@angular/core';
 import { BioService } from '../../service/bio.service';
-import { ContactMeComponent } from '../contact-me/contact-me.component';
 import { BioComponent } from '../Bio/bio/bio.component';
-import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from '../Footer/footer/footer.component';
 import { HeaderComponent } from '../Header/header/header.component';
 import { ProfileComponent } from '../Profile/profile/profile.component';
 import { StrengthsWeaknessComponent } from '../strengths-weakness/strengths-weakness.component';
+import { ProjectsComponentComponent } from '../Projects/projects-component/projects-component.component';
 
 @Component({
   selector: 'app-home-component',
-  imports: [HeaderComponent,FooterComponent,ProfileComponent,BioComponent,StrengthsWeaknessComponent],
+  imports: [HeaderComponent,FooterComponent,ProfileComponent,BioComponent,StrengthsWeaknessComponent,ProjectsComponentComponent],
   templateUrl: './home-component.component.html',
   styleUrl: './home-component.component.scss'
 })

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.outercontainer{
+    width: 100vw;
+    min-height: 80vh;
+    box-sizing: border-box;
+}
+.title{
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 100;
+    font-size: 5vh;
+    text-transform: uppercase;
+}
+.projects{
+    width: 100vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.projectcard{
+    border:  1px solid white;
+    border-radius: 2vh;
+    width: 95vw;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    transition: all 1.5s ease-in-out;
+    overflow: hidden;
+}
+.projectcard:hover{
+    height: 45vh;
+}
+.left{
+    width: 47.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    transition: all 2s ease-in-out;
+}
+.projectcard:hover .left{
+    transform: translateX(-45vw);
+    //border-right: 0.1vw solid white;
+}
+.right{
+    width: 47.5vw;
+    display: flex;
+    align-items: center;
+    transition: all 2s ease-in-out;
+}
+.projectcard:hover .right{
+    transform: translateX(45vw);
+    //border-left: 0.1vw solid white;
+}
+.text1, .text2{
+    color: white;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 100;
+    font-size: 3vh;
+    transition: all 2s ease-in-out;
+}
+.projectcard:hover .text1{
+    transform: rotate(-90deg);
+}
+.projectcard:hover .text2{
+    transform: rotate(90deg);
+}

@@ -1,0 +1,10 @@
+<div [ngClass] = "ShowCard ? 'projectcard' : 'StopProjecting'">
+    <div class="showcase">
+        <div [ngClass]="ShowCard ? 'showcasecard' : 'showcasecardfadeaway'" (click)="NavigateToTaskManagement()">
+            Click Here<br/>To<br/>Create A Task
+        </div>
+    </div>
+    <div class="description" *ngIf="ShowCard">
+        The Task Management System is a simple yet powerful tool designed to help users manage their daily activities efficiently. Users can create new tasks, edit existing ones, and delete tasks when no longer needed. Each task can be associated with one or more tags, allowing for easy categorization and filtering based on task type or priority. This system streamlines task organization and improves productivity by enabling clear visibility and control over task workflows.
+    </div>
+</div>

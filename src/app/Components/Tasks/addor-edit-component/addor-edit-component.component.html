@@ -1,0 +1,74 @@
+<form [formGroup]="formGroup" (ngSubmit)="Onsubmit()">
+    <div class="outercontainer">
+        <div class="left">
+            <div class="title">
+                <div class="LabelandInput">
+                    <label for="Title">Title</label>
+                    <input type="text" name="Title" placeholder="Task Title" formControlName="title">
+                </div>
+                <div class="error">
+                    <span class="error-message" *ngIf="formGroup.get('title')?.hasError('required') && (formGroup.get('title')?.touched)">This field is required</span>
+                    <span class="error-message" *ngIf="formGroup.get('title')?.hasError('maxlength') && (formGroup.get('title')?.touched)">Maximum length is 60 characters</span>
+                    <span class="error-message" *ngIf="formGroup.get('title')?.hasError('minlength') && (formGroup.get('title')?.touched)">Minimum length is 3 characters</span>
+                </div>
+            </div>
+            <div class="DateTime">
+                <div class="withouterrors">
+                    <div class="startdatediv">
+                        <label for="StartDate">Start Date</label>
+                        <input id="startDatePicker" type="text" name="StartDate" placeholder="DD-MM-YYYY" readonly formControlName="startDate">
+                    </div>
+                    <div class="startdatediv">
+                        <label for="StartDate">Due Date</label>
+                        <input id="dueDatePicker" type="text" name="DueDate" placeholder="DD-MM-YYYY" readonly formControlName="dueDate">
+                    </div>
+                </div>
+                <div class="errordate">
+                    <span class="error-message-startdatemessage" *ngIf="formGroup.get('startDate')?.hasError('required') && formGroup.get('startDate')?.touched">This field is required</span>
+                    <span class="error-message-duedate" *ngIf="formGroup.get('dueDate')?.hasError('required') && formGroup.get('dueDate')?.touched">This field is required</span>
+                </div>
+            </div>
+            <div class="droprdowns">
+                <div class="dropdown">
+                    <label for="optionSelect">Priority</label>
+                    <select id="optionSelect" formControlName="priority">
+                    <option *ngFor="let option of Priorityoptions" [value]="option.value">{{ option.label }}</option>
+                    </select>
+                </div>
+                <div class="dropdown">
+                    <label for="optionSelect">Status</label>
+                    <select id="optionSelect" formControlName="status">
+                    <option *ngFor="let option of Statusoptions" [value]="option.value">{{ option.label }}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="tagsandtargetdate">
+                <div class="tagswitherror">
+                    <div class="tags">
+                        <label for="Tags">Tags</label>
+                        <input type="text" name="Tags" placeholder="Task Tags" formControlName="tags">
+                    </div>
+                </div>
+                <div class="targetdatewitherrors">
+                    <div class="startdatediv">
+                            <label for="StartDate">Target Date</label>
+                            <input id="targetDatePicker" type="text" name="TargetDate" placeholder="DD-MM-YYYY" readonly formControlName="targetDate">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="description">
+                <label for="Description">Description</label>
+                <textarea name="Description" placeholder="Task Description" formControlName="description"></textarea>
+            </div>
+            <div class="error">
+                <span class="error-message" *ngIf="formGroup.get('description')?.hasError('maxlength') && (formGroup.get('description')?.touched)">Maximum length is 500 characters</span>
+            </div>
+            <div class="actionbuttons">
+                <button class="CancelButton" type="button" (click)="CancelTaskCreationOnClick()">Cancel</button>
+                <button [ngClass]="!formGroup.invalid ? 'CreateButton' : 'disableButton'" type="submit" [disabled]="formGroup.invalid">Create</button>
+            </div>
+        </div>
+    </div>
+</form>

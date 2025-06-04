@@ -35,23 +35,34 @@
         </div>
         <div class="right">
             <div class="form">
-                <div class="finalsubsections">
-                    <div class="name">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your name.." [(ngModel)]="yourName">
+                <form #ContactForm="ngForm" (ngSubmit)="OnSubmit()">
+                    <div class="finalsubsections">
+                        <div class="name">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name.." [(ngModel)]="yourName" required pattern="[a-zA-Z ]*">
+                            <div class="errors1" *ngIf="ContactForm.controls['name']?.invalid && (ContactForm.controls['name']?.dirty || ContactForm.controls['name']?.touched)">
+                                Invalid Name
+                            </div>
+                        </div>
+                        <div class="email">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your email.." [(ngModel)]="yourEmail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                            <div class="errors1" *ngIf="ContactForm.controls['email']?.invalid && (ContactForm.controls['email']?.dirty || ContactForm.controls['email']?.touched)">
+                                Invalid Email
+                            </div>
+                        </div>
+                        <div class="message">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Write something.." [(ngModel)]="yourMessage" required></textarea>
+                            <div class="errors" *ngIf="ContactForm.controls['message']?.invalid && (ContactForm.controls['message']?.dirty || ContactForm.controls['message']?.touched)">
+                                Message cannot be empty
+                            </div>
+                        </div>
+                        <div class="submit">
+                            <button type="submit" [disabled]="ContactForm.invalid" [ngClass]="ContactForm.invalid ? 'submitbuttondisabled' : 'SubmitButton'" (click)="OnSubmit()">Submit</button>
+                        </div>
                     </div>
-                    <div class="email">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your email.." [(ngModel)]="yourEmail">
-                    </div>
-                    <div class="message">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Write something.." [(ngModel)]="yourMessage"></textarea>
-                    </div>
-                    <div class="submit">
-                        <button type="submit" class="SubmitButton" (click)="OnSubmit()">Submit</button>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>

@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.outercontainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+.container{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ShowTasks{
+    width: 90vw;
+    height: 76vh;
+    border-radius: 2vh;
+    border: 0.1vh solid #7f7c7c;
+}
+.header{
+    display: flex;
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid #7f7c7c;
+}
+.navigate{
+    width: 5vh;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrow{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: #7f7c7c;
+    border-radius: 20%;
+    border: 2px solid #7f7c7c;
+    cursor: pointer;
+    transition:  all 0.2s ease-in-out;
+    box-sizing: border-box;
+}
+.arrow:hover{
+    border: 2px solid white;
+}
+.createtask{
+    width: 10vw;
+    height: 5vh;
+    button{
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        background-color: black;
+        border: 1px solid #7f7c7c;
+        color: #7f7c7c;
+        border-radius: 0.6vh;
+        transition: all 0.3s ease-in-out;
+        font-family: "Archivo", sans-serif;
+        font-weight: 300;
+        font-size: 2.3vh;
+    }
+    button:hover{
+        color: white;
+        border: 1px solid white;
+    }
+}
+.headerheading{
+    width: 70vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Archivo", sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2.5vh;
+    position: relative;
+    left: 3.5vw;
+}
+.body{
+    width: 100%;
+    height: 68vh;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    width: 0vh;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: transparent;
+}
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+.showtaskCards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vh;
+    padding: 5vh;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+.CardContainer{
+    background: #181717;
+    box-shadow: 0.01vw 0.01vh 0.3vw rgb(87, 86, 86),
+    -0.01vw -0.01vh 0.3vw rgb(60, 60, 60),
+    inset 0.36vw 0.6vh 0.3vw rgb(0, 0, 0),
+    inset -0.2vw -0.2vh 0.3vw rgb(60, 60, 60);
+    min-width: 25vw;
+    min-height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4vh;
+}
+.noTasksCreated{
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Archivo", sans-serif;
+    font-weight: 300;
+    font-size: 2.5vh;
+
+}

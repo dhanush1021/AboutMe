@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.StopProjecting, .projectcard{
+    height: 45vh;
+    position: relative;
+    left: 0.5vw;
+    display: flex;
+}
+.projectcard{
+    animation: ProjectCardExpand 2s ease-in-out forwards;
+}
+@keyframes ProjectCardExpand{
+    0% {
+        width: 0vw;
+    }
+    100% {
+        width: 90vw;
+    }
+}
+.StopProjecting{
+    animation: ProjectCardShrink 2s ease-in-out forwards;
+}
+@keyframes ProjectCardShrink{
+    0% {
+        width: 90vw;
+    }
+    100% {
+        width: 0vw;
+    }
+}
+.showcase{
+    width: 35vw;
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.showcasecardfadeaway,.showcasecard{
+    width: 25vw;
+    height: 30vh;
+    background: #212121;
+    border: 0.3vh solid white;
+    border-radius: 2vh;
+    transform: rotateY(40deg) rotateX(30deg);
+    color: rgb(138, 132, 132);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Anton", sans-serif;
+    font-size: 4vh
+}
+.showcasecard{
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+    animation: ProjectCardFadeIn 2s ease-in-out;
+}
+@keyframes ProjectCardFadeIn{
+    0% {
+        opacity: 0;
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(40deg) rotateX(30deg);
+    }
+}
+.showcasecardfadeaway{
+    animation: ProjectCardFadeAway 1.2s ease-in-out forwards;
+}
+@keyframes ProjectCardFadeAway{
+    0% {
+        opacity: 1;
+        transform: rotateY(40deg) rotateX(30deg);
+    }
+    100% {
+        opacity: 0;
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+}
+.showcasecard:hover{
+    transform: rotateY(0deg) rotateX(0deg);
+}
+.description{
+    width: 55vw;
+    height: 45vh;
+    color: #7f7c7c;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 2vh;
+    animation: ViewDescription 4s ease-in-out;
+}
+@keyframes ViewDescription{
+    0%{
+        opacity: 0;
+        color: transparent;
+    }
+    100%{
+        opacity: 1;
+        color: #7f7c7c;
+    }
+}

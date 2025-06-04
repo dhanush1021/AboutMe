@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.outercontainer{
+    width: 90vw;
+    height: 68vh;
+    display: flex;
+}
+.left{
+    width: 45vw;
+    height: 68vh;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    box-sizing: border-box;
+    padding-top: 4vh;
+}
+.title{
+    width: 100%;
+    height: 12vh;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.5vh;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 100;
+}
+.LabelandInput{
+    display: flex;
+    width: 100%;
+    height: 70%;
+    align-items: center;
+    justify-content: space-around;
+    input{
+        width: 86%;
+        height: 5vh;
+        border: none;
+        border-radius: 5px;
+        box-sizing: border-box;
+        padding: 0 1%;
+        font-family: "Open Sans", sans-serif;
+        font-size: 2.2vh;
+        color: #7f7c7c;
+        background-color: transparent;
+        border: 1px solid #7f7c7c;
+        outline: none;
+        font-style: italic;
+        transition: all 0.3s ease-in-out;
+        text-align: center;
+    }
+    input:focus{
+        border: 1px solid white;
+    }
+}
+.DateTime{
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    flex-direction: column;
+}
+.withouterrors{
+    display: flex;
+    width: 100%;
+    height: 70%;
+}
+.startdatediv{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.2vh;
+    font-weight: 100;
+    font-style: italic;
+    text-transform: uppercase;
+    input{
+        outline: none;
+        border: 0.3px solid #7f7c7c;
+        width: 60%;
+        height: 40%;
+        text-align: center;
+        border-radius: 5px;
+        background-color: transparent;
+        font-family: "Open Sans", sans-serif;
+        font-size: 2.2vh;
+        font-style: italic;
+        color: #7f7c7c;
+        font-weight: 100;
+    }
+}
+.errordate{
+    color: red;
+    font-size: 2vh;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.8vh;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+.error{
+    color: red;
+    font-size: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8vh;
+    font-weight: 100;
+}
+.error-message-startdatemessage{
+    position: relative;
+    left: 10%;
+}
+.error-message-duedate{
+    position: relative;
+    left: 40%;
+}
+.droprdowns{
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+}
+.dropdown{
+    color: white;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.2vh;
+    font-style: italic;
+    font-weight: 100;
+    text-transform: uppercase;
+    #optionSelect{
+        width: 60%;
+        height: 30%;
+        border: 1px solid #7f7c7c;
+        border-radius: 0.5vh;
+        background-color: transparent;
+        color: #7f7c7c;
+        font-family: "Open Sans", sans-serif;
+        font-size: 2vh;
+        text-align: center;
+        font-weight: 100;
+        outline: none;
+        cursor: pointer;
+        font-style: italic;
+        option{
+            background-color: black;
+            border: 1px solid white;
+            outline: none;
+            border-radius: 0.5vh;
+            color: #7f7c7c;
+            font-family: "Open Sans", sans-serif;
+            font-size: 2vh;
+            cursor: pointer;
+            font-weight: 100;
+        }
+    }
+}
+.tagsandtargetdate{
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+}
+.tagswitherror{
+    width: 50%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .tags{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-family: "Open Sans", sans-serif;
+        font-size: 2.2vh;
+        font-style: italic;
+        text-transform: uppercase;
+        color: white;
+        input{
+            width: 70%;
+            height: 40%;
+            border: 1px solid #7f7c7c;
+            border-radius: 0.5vh;
+            background-color: transparent;
+            color: #7f7c7c;
+            font-family: "Open Sans", sans-serif;
+            font-size: 2vh;
+            text-align: center;
+            font-weight: 100;
+            outline: none;
+            font-style: italic;
+        }
+    }
+}
+.targetdatewitherrors{
+    width: 50%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .startdatediv{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: white;
+        font-family: "Open Sans", sans-serif;
+        font-size: 2.2vh;
+        font-weight: 100;
+        font-style: italic;
+        text-transform: uppercase;
+        input{
+            outline: none;
+            border: 0.3px solid #7f7c7c;
+            width: 60%;
+            height: 40%;
+            text-align: center;
+            border-radius: 5px;
+            background-color: transparent;
+            font-family: "Open Sans", sans-serif;
+            font-size: 2.2vh;
+            font-style: italic;
+            color: #7f7c7c;
+            font-weight: 100;
+        }
+    }
+}
+.right{
+    width: 45vw;
+    height: 68vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: space-around;
+    padding-top: 1.7%;
+    .description{
+        width: 100%;
+        height: 70%;
+        color: white;
+        font-family: "Open Sans", sans-serif;
+        font-size: 2.2vh;
+        font-style: italic;
+        font-weight: 100;
+        display: flex;
+        justify-content: space-around;
+        text-transform: uppercase;
+        textarea{
+            height: 100%;
+            width: 80%;
+            border: 1px solid #7f7c7c;
+            border-radius: 2vh;
+            box-sizing: border-box;
+            font-family: "Open Sans", sans-serif;
+            font-size: 2.2vh;
+            color: #7f7c7c;
+            background-color: transparent;
+            outline: none;
+            resize: none;
+            font-style: italic;
+            padding: 1%;
+        }
+        ::-webkit-scrollbar{
+            width: 0vh;
+            background-color: transparent;
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color: transparent;
+        }
+        ::-webkit-scrollbar-track{
+            background-color: transparent;
+        }
+    }
+    .actionbuttons{
+        width: 80%;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 10%;
+        padding-right: 2%;
+        box-sizing: border-box;
+        .CancelButton{
+            width: 30%;
+            height: 60%;
+            border: 1px solid white;
+            border-radius: 0.5vh;
+            background-color: transparent;color: white;
+            font-family: "Open Sans", sans-serif;
+            font-size: 2vh;
+            font-style: italic;
+            font-weight: 100;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+}
+.CreateButton{
+    width: 30%;
+    height: 60%;
+    border: 1px solid white;
+    border-radius: 0.5vh;
+    background-color: transparent;color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2vh;
+    font-style: italic;
+    font-weight: 100;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.CreateButton:hover{
+    background-color: white;
+    color: black;
+}
+.disableButton{
+    width: 30%;
+    height: 60%;
+    border: 1px solid white;
+    border-radius: 0.5vh;
+    background-color: transparent;color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2vh;
+    font-style: italic;
+    font-weight: 100;
+    cursor: not-allowed;
+}
+

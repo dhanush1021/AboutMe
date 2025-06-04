@@ -1,0 +1,35 @@
+<div class="outercontainer">
+    <app-header></app-header>
+    <div class="container">
+        <div class="ShowTasks">
+            <div class="header">
+                <div class="navigate">
+                    <div class="arrow" *ngIf="CreationOfTask" (click) = "CreationOfTask = false">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e3e3e3"><path d="M400-240 160-480l240.67-240.67L448-673.33l-160 160h512.67v66.66H288l159.33 159.34L400-240Z"/></svg>
+                    </div>
+                </div>
+                <div class="headerheading">
+                    <span *ngIf="CreationOfTask">Create Task</span>
+                    <span *ngIf="!CreationOfTask" class="showtasks">Tasks</span>
+                </div>
+                <div class="createtask">
+                    <button *ngIf="!CreationOfTask" (click)="CreationOfTask = true">Create Task</button>
+                </div>
+            </div>
+            <div class="body" [ngStyle] = "{ 'overflow-y': CreationOfTask ? 'hidden' : 'scroll' }">
+                <div class="create" *ngIf="CreationOfTask">
+                    <app-addor-edit-component (CancelTaskCreation)="TaskCancelled($event)"></app-addor-edit-component>
+                </div>
+                <div class="showtaskCards" *ngIf="!CreationOfTask && TaskList.length > 0">
+                    <div class="CardContainer" *ngFor="let task of TaskList">
+                        <app-task-cards-components [Task]="task"></app-task-cards-components>
+                    </div>
+                </div>
+                <div class="noTasksCreated" *ngIf="TaskList.length === 0 && !CreationOfTask">
+                    <span>No Tasks Created</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

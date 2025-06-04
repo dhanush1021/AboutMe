@@ -1,0 +1,22 @@
+<div class="outercontainer">
+    <div class="title">
+        Career Milestones
+    </div>
+    <div class="projects">
+        <div class="projectcard" (mouseenter) = "ToggleShowCardToTrue()" (mouseleave) = "ToggleShowCardToFalse()">
+            <div class="left">
+                <div class="text1">
+                    Task Manag
+                </div>
+            </div>
+            <div class="ShowingProjectCard">
+                <app-project-card [ShowCard] = ShowProject></app-project-card>
+            </div>
+            <div class="right">
+                <div class="text2">
+                    ement System
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
